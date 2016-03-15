@@ -9,7 +9,10 @@ var notify = require('gulp-notify')
 gulp.task('default', function () {
   gulp.src('css/*.css')
     .pipe(concatCSS('bundle.css'))
-    .pipe(prefix('last 2 versions'))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
     .pipe(cleanCSS())
     .pipe(rename('bundle.min.css'))
     .pipe(gulp.dest('app/css'))
