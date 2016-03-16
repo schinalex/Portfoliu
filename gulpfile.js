@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css')
 var rename = require('gulp-rename')
 // var notify = require('gulp-notify')
 var connect = require('gulp-connect')
+var sass = require('gulp-sass')
 
 gulp.task('connect', function() {
   connect.server({
@@ -13,6 +14,11 @@ gulp.task('connect', function() {
     livereload: true
   });
 });
+
+gulp.task('sass', function () {
+  gulp.src(sass/.scss)
+
+})
 
 gulp.task('html', function () {
   gulp.src('app/index.html')
