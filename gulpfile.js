@@ -1,48 +1,51 @@
+'use strict'
 var gulp = require('gulp')
-var jade = require('gulp-jade')
 var autoprefixer = require('gulp-autoprefixer')
 var concatCSS = require('gulp-concat-css')
 var cleanCSS = require('gulp-clean-css')
 var rename = require('gulp-rename')
-// var notify = require('gulp-notify')
-var connect = require('gulp-connect')
 var sass = require('gulp-sass')
+var sourcemaps = require('gulp-sourcemaps')
+// var sassIndex = require('sass-index')
+var browserSync = require('browser-sync').create()
+var reload = browserSync.reload
 
-gulp.task('connect', function() {
-  connect.server({
-    root: 'app',
-    livereload: true
-  });
-});
-
-gulp.task('sass', function () {
-  gulp.src(sass/.scss)
-
+gulp.task('serve', function () {
+  browserSync.init({
+    server: {baseDir: 'app'}
+  })
 })
 
 gulp.task('html', function () {
-  gulp.src('app/index.html')
+  gulp.src('app/*.html')
   // do html stuff
-  .pipe(connect.reload())
+})
+
+gulp.task('sass', function () {
+  return gulp.src('sass/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('css', function () {
-  gulp.src('css/*.css')
+  gulp.src('app/css/*.css')
   .pipe(concatCSS('bundle.css'))
 	.pipe(autoprefixer({
-		browsers: ['last 2 versions'],
-		cascade: false
+  browsers: ['last 2 versions'],
+  cascade: false
 	}))
   .pipe(cleanCSS())
-  .pipe(rename('bundle.min.css'))
+  .pipe(rename('style.min.css'))
   .pipe(gulp.dest('app/css'))
-  .pipe(connect.reload())
-  // .pipe(notify('Done!'))
 })
 
 gulp.task('watch', function () {
-  gulp.watch('css/*.css', ['css'])
-  gulp.watch('app/index.html', ['html'])
+  gulp.watch('app/*.html', ['html'])
+  gulp.watch('sass/*.scss', ['sass'])
+  gulp.watch('app/*.html').on('change', reload)
 })
 
-gulp.task('default', ['connect', 'html', 'css', 'watch'])
+gulp.task('default', ['serve', 'html', 'sass', 'css', 'watch'])
