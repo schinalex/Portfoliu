@@ -1,9 +1,9 @@
 'use strict'
 var gulp = require('gulp')
+var sass = require('gulp-sass')
 var autoprefixer = require('gulp-autoprefixer')
 var cleanCSS = require('gulp-clean-css')
 var rename = require('gulp-rename')
-var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
 var reload = browserSync.reload
 
@@ -32,7 +32,7 @@ gulp.task('mincss', function () {
 })
 
 gulp.task('watch', function () {
-  gulp.watch('sass/style.sass', ['sass'])
+  gulp.watch('sass/*.sass', ['sass'])
   gulp.watch('app/*.html').on('change', reload)
 })
 

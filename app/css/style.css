@@ -1,13 +1,2 @@
-body {
-  background: linear-gradient(45deg, gray, blue); }
-
-h1 {
-  color: #ccc; }
-
-p {
-  color: green; }
-
-div {
-  background-color: white; }
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlcyI6WyJzdHlsZS5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg0NWRlZywgZ3JheSwgYmx1ZSk7XHJcbn1cclxuXHJcbmgxIHtcclxuICBjb2xvcjogI2NjYztcclxufVxyXG5cclxucCB7XHJcbiAgY29sb3I6IGdyZWVuO1xyXG59XHJcbmRpdiB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbn1cclxuIl0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJLENBQUM7RUFDSCxVQUFVLEVBQUUsa0NBQWUsR0FDNUI7O0FBRUQsRUFBRSxDQUFDO0VBQ0QsS0FBSyxFQUFFLElBQUssR0FDYjs7QUFFRCxDQUFDLENBQUM7RUFDQSxLQUFLLEVBQUUsS0FBTSxHQUNkOztBQUNELEdBQUcsQ0FBQztFQUNGLGdCQUFnQixFQUFFLEtBQU0sR0FDekIiLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
+main div.col-md-4 {
+  border: 1px solid black; }
