@@ -1,2 +1,7 @@
+section {
+  color: blue;
+  height: 1000px;
+  background: black; }
+
 main div.col-md-4 {
   border: 1px solid black; }
