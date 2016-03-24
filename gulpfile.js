@@ -32,7 +32,7 @@ gulp.task('mincss', function () {
 })
 
 gulp.task('watch', function () {
-  gulp.watch('sass/*.sass', ['sass'])
+  gulp.watch('sass/**/*.sass', ['sass'])
   gulp.watch('app/*.html').on('change', reload)
 })
 

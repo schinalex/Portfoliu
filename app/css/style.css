@@ -1,7 +1,52 @@
+nav > a {
+  display: block;
+  margin: 2em 2em 2em 2em;
+  color: green;
+  text-decoration: none; }
+
+nav > a:hover {
+  color: blue;
+  text-decoration: none; }
+
+.sidebar {
+  background: #202024 url(../img/black-thread.png);
+  position: fixed;
+  left: -285px;
+  width: 285px;
+  height: 100vh; }
+
+.search {
+  float: right; }
+
+.fa-times {
+  color: red; }
+
+#logo {
+  height: 6em;
+  width: 6em; }
+
+h1 {
+  margin: auto; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 285px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.2s; }
+
+.wrapper {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative; }
+
 section {
   color: blue;
   height: 1000px;
-  background: black; }
-
-main div.col-md-4 {
-  border: 1px solid black; }
+  background: gray; }

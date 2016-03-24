@@ -10,26 +10,44 @@
   <meta name="keywords" content="alex schin, personal information, web development, javascipt">
   <!-- Bootsrap CSS -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- my style -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper">
+  <aside class="sidebar">
+    <div class="icon-close">
+      <i class="fa fa-times"></i>
+    </div>
+    <nav>
+      <a href="#hello">Hello</a>
+      <a href="#intro">Intro</a>
+      <a href="#skills">Skills</a>
+      <a href="#works">Works</a>
+      <a href="#lab">Lab</a>
+      <a href="#about">About</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+  </aside>
+  <!-- <div class="overlay"></div> -->
+  <div class="content">
     <header>
       <!-- logo -->
+      <img src="img/brain.jpg" alt="logo" id="logo">
       <!-- search -->
+      <span class="search">
+        <input type="text" id="search">
+        <i class="fa fa-search"></i>
+      </span>
     </header>
 
+
     <main>
-      <nav>
-        <a href="#hello">Hello</a>
-        <a href="#intro">Intro</a>
-        <a href="#skills">Skills</a>
-        <a href="#works">Works</a>
-        <a href="#lab">Lab</a>
-        <a href="#about">About</a>
-        <a href="#contacts">Contacts</a>
-      </nav>
+      <div class="icon-menu">
+        <i class="fa fa-bars"></i>
+        Menu
+      </div>
+
       <h1>Portfolio</h1>
       <p>Hello World!</p>
       <div class="container">
@@ -42,7 +60,6 @@
         <section id="contacts">Contacts</section>
       </div>
     </main>
-
     <footer>
     </footer>
   </div>
@@ -51,6 +68,6 @@
   <!-- Bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- my js -->
-  <script src="js/main.js"></scrixpt>
+  <script src="js/main.js"></script>
 </body>
 </html>
