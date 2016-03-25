@@ -40,6 +40,6 @@ var main = function () {
       //event.preventDefault()
     // }
   })
-  $('.icon-close').click(hide)
+  // $('.icon-close').click(hide)
 }
 $(document).ready(main)

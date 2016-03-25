@@ -1,19 +1,12 @@
-nav > a {
-  display: block;
-  margin: 2em 2em 2em 2em;
-  color: green;
-  text-decoration: none; }
-
-nav > a:hover {
-  color: blue;
-  text-decoration: none; }
-
 .sidebar {
   background: #202024 url(../img/black-thread.png);
   position: fixed;
   left: -285px;
   width: 285px;
   height: 100vh; }
+
+.visible {
+  left: 0; }
 
 .search {
   float: right; }
