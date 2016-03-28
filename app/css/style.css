@@ -63,7 +63,9 @@ footer {
   width: 5em; }
 
 h1 {
-  margin: auto; }
+  margin: auto;
+  text-align: center;
+  padding: 1em; }
 
 .overlay {
   display: none;
@@ -78,6 +80,7 @@ h1 {
   transition: opacity 0.2s; }
 
 .icon-menu {
+  position: fixed;
   display: inline-block;
   border-style: dashed;
   border-width: thin;
