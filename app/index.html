@@ -16,11 +16,11 @@
 </head>
 <body>
   <aside class="sidebar">
-    <div class="icon-close">
+    <!-- <div class="icon-close">
       <i class="fa fa-times"></i>
-    </div>
+    </div> -->
     <nav>
-      <ul>
+      <ul class="nav-">
         <li><a href="#hello">Hello</a></li>
         <li><a href="#intro">Intro</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -31,18 +31,22 @@
       </ul>
     </nav>
   </aside>
-  <!-- <div class="overlay"></div> -->
+
+  <div class="overlay"></div>
+
   <div class="content">
     <header>
       <!-- logo -->
-      <img src="img/brain.jpg" alt="logo" id="logo">
+      <div class="logo-field">
+        <img src="img/brain.png" alt="logo" id="logo">
+        <p>Alex Schin</p>
+      </div>
       <!-- search -->
       <span class="search">
         <input type="text" id="search">
-        <i class="fa fa-search"></i>
+        <i class="fa fa-search search-icon"></i>
       </span>
     </header>
-
 
     <main>
       <div class="icon-menu">
@@ -51,18 +55,40 @@
       </div>
 
       <h1>Portfolio</h1>
-      <p>Hello World!</p>
-      <div class="container">
-        <section id="hello">Hello</section>
-        <section id="intro">Intro</section>
-        <section id="skills">Skills</section>
-        <section id="works">Works</section>
-        <section id="lab">Lab</section>
-        <section id="about">About</section>
-        <section id="contacts">Contacts</section>
+      <!-- <p>Hello World!</p> -->
+      <div class="container-fluid">
+        <div class="row">
+          <section id="hello">Hello</section>
+        </div>
+
+        <div class="row">
+          <section id="intro">Intro</section>
+        </div>
+
+        <div class="row">
+          <section id="skills">Skills</section>
+        </div>
+
+        <div class="row">
+          <section id="works">Works</section>
+        </div>
+
+        <div class="row">
+          <section id="lab">Lab</section>
+        </div>
+
+        <div class="row">
+          <section id="about">About</section>
+        </div>
+
+        <div class="row">
+          <section id="contacts">Contacts</section>
+        </div>
       </div>
     </main>
+
     <footer>
+      <div class="year">2016</div>
     </footer>
   </div>
   <!-- jQuery -->
