@@ -1,25 +1,18 @@
-'use strict'
-console.log('main.js')
-var main = function () {
-  // var hidden = true
+// var main = function () {
+  'use strict'
   /* Push the body and the nav over by 285px over */
   $('.icon-menu').click(function (event) {
-
-    // $('.overlay').show(function() {
-    //   $(this).css('opacity', '0.5')
-    // })
-
+    $('.overlay').show()
     $('.sidebar').animate({
       left: '0px'
     }, 200)
-
     $('.content').animate({
       marginLeft: '285px'
     }, 200)
-    event.stopPropagation()
-    // hidden = false
   })
-  var hide = function () {
+
+  /* Then push them back */
+  $('.overlay').click(function (event) {
     $('.sidebar').animate({
       left: '-285px'
     }, 200)
@@ -27,19 +20,23 @@ var main = function () {
     $('.content').animate({
       marginLeft: '0px'
     }, 200)
-    // hidden = true
+    $('.overlay').hide()
+  })
+
+  /* set background and save the choice in cookie */
+  var changeBackground = function () {
+    var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)background\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+    if (cookieValue) {
+      $('#hello').removeClass('bg1 bg2 bg3')
+      $('#hello').addClass(cookieValue)
+    }
+  }
+  var selectBackground = function (selectedBackground) {
+    document.cookie = 'background=' + selectedBackground
+    changeBackground()
   }
 
-
-
-  /* Then push them back */
-  $('.content').click(function (event) {
-    console.log(event.target.nodeName)
-    // if (event.target.nodeName.toLowerCase() !== 'i') {
-      hide()
-      //event.preventDefault()
-    // }
-  })
-  // $('.icon-close').click(hide)
-}
-$(document).ready(main)
+  changeBackground()
+// }
+//
+// $(document).ready(main)
